@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="dashbord.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo"><img src="/lo ve.png" alt="" height="90"></div>
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <a href="#"><i class="fas fa-shopping-cart"></i> Sales</a>
+                        <ul class="submenu">
+                            <li>Sales Price List</li>
+                            <li>Estimate</li>
+                            <li>Sales Order</li>
+                            <li>Dispatch</li>
+                            <li>Sales Return Challan</li>
+                            <li>Sales Invoice</li>
+                            <li>Payment Receipt</li>
+                            <li>Cheque Return</li>
+                            <li>Update Logistic</li>
+                            <li>Targets</li>
+                            <li>Bulk Dispatch/Invoice</li>
+                            <li>Collection</li>
+                            <li>E-Commerce</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-shopping-bag"></i> Purchase</a>
+                        <ul class="submenu">
+                            <li>New Purchase</li>
+                            <li>Purchase Report</li>
+                            <li>Return Purchase</li>
+                            <li>Purchase Bill</li>
+                            <li>Purchase Credit No</li>
+                            <li>Payment Dunes</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-wallet"></i> Finance</a>
+                        <ul class="submenu">
+                            <li>Finance Report</li>
+                            <li>Payments</li>
+                            <li>Receivables</li>
+                            <li>Bank Reconciliation</li>
+                            <li>Expense Journal</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-box"></i> Inventory</a>
+                        <ul class="submenu">
+                            <li>Stock Overview</li>
+                            <li>Inventory Report</li>
+                            <li>Stock Adjustment</li>
+                            <li>Material Issue</li>
+                            <li>Material Receipt</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-store"></i> Point of Sale</a>
+                        <ul class="submenu">
+                            <li>New Transaction</li>
+                            <li>POS Report</li>
+                            <li>Returns</li>
+                            <li>POS Order</li>
+                            <li>Alteration Order</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-industry"></i> Production</a>
+                        <ul class="submenu">
+                            <li>Production Orders</li>
+                            <li>Production Report</li>
+                            <li>Production Schedule</li>
+                            <li>Bill of Material</li>
+                            <li>Disassembling</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-users"></i> CRM</a>
+                        <ul class="submenu">
+                            <li>Manage Contacts</li>
+                            <li>Leads</li>
+                            <li>Customer Feedback</li>
+                            <li>CRM Dashboard</li>
+                            <li>Vendor</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-briefcase"></i> Asset</a>
+                        <ul class="submenu">
+                            <li>Asset Overview</li>
+                            <li>Asset Report</li>
+                            <li>Asset Maintenance</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-user-tie"></i> Employee</a>
+                        <ul class="submenu">
+                            <li>Employee Directory</li>
+                            <li>Payroll</li>
+                            <li>Attendance</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-chart-bar"></i> Report</a>
+                        <ul class="submenu">
+                            <li>Sales Report</li>
+                            <li>Purchase Report</li>
+                            <li>Inventory Report</li>
+                        </ul>
+                    </li>
+                </ul>
+            
+            </nav>
+        </aside>
+        <main>
+            <header class="navbar">
+                <div class="title">Rospand Finovate - <i>Innovating Financial Success</i></div>
+                
+                <div class="navbar-icons">
+                    <!-- Search Bar -->
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search..." />
+                        <i class="fas fa-search"></i>
+                    </div>
+            
+                    <!-- Notification Icon -->
+                    <div class="icon">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-count">3</span> <!-- Optional: Notification count -->
+                    </div>
+            
+                    <!-- Settings Icon -->
+                    <div class="icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+            
+                    <!-- User Profile -->
+                    <div class="user-profile">
+                        <i class="fas fa-user-circle"></i>
+                        <span class="username">John Doe</span> <!-- Optional: Display username -->
+                    </div>
+                </div>
+            </header>
+            <section class="dashboardsec">
+                <div class="dashboardchart">
+                    <h1>Total Sales</h1>
+                    <div class="chart-container">
+                        <canvas id="salesChart"></canvas>
+                    </div>
+                </div>
+                <div class="dashboard">
+                    <div class="header">
+                        <h1> Sales Overview</h1>
+                    </div>
+                    <div class="metrics">
+                        <div class="metric">
+                            <h2>Orders</h2>
+                            <p>Total Orders: <span id="total-orders">20,705</span></p>
+                            <p class="increase">4.75% Increase in orders last week</p>
+                        </div>
+                        <div class="metric">
+                            <h2>Customers</h2>
+                            <p>Total Customers: <span id="total-customers">84,127</span></p>
+                            <p class="decrease">Total visitors decreased by 1.25%</p>
+                        </div>
+                    </div>
+                    
+                    <h2 class="soh2">Sales Overview</h2>
+                    <div class="sales-overview">
+                          <div class="sales-metrics">
+                            <div class="sales-metric">
+                                <h3>Total Sales</h3>
+                                <p><span id="total-sales">9,586</span></p>
+                            </div>
+                            <div class="sales-metric">
+                                <h3>Monthly Sales</h3>
+                                <p><span id="monthly-sales">3,507</span></p>
+                            </div>
+                            <div class="sales-metric">
+                                <h3>Today’s Sales</h3>
+                                <p><span id="todays-sales">357</span></p>
+                            </div>
+                        </div>
+                        <div class="dashboardpiechart">
+                            <h1>Product Sales Distribution</h1>
+                            <div class="chart-container">
+                                <canvas id="productSalesChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="revenue">
+                        <h2>Total Revenue</h2>
+                        <p>$<span id="total-revenue">15,278</span></p>
+                        <p class="increase">Revenue increases this month > 3.15%</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Financial Overview Section -->
+            <section class="financial-overview">
+                <div class="overview-header">
+                    <h2>Financial Overview</h2>
+                </div>
+                <div class="overview-cards">
+                    <div class="card green">
+                        <h3>Upcoming Payments</h3>
+                        <p>₹4,500</p>
+                        <p>Due in 3 Days</p>
+                    </div>
+                    <div class="card blue">
+                        <h3>Recent Transactions</h3>
+                        <p>₹10,000</p>
+                        <p>Payment received from client X</p>
+                    </div>
+                    <div class="card yellow">
+                        <h3>Profit Margin</h3>
+                        <p>20%</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 20%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+    <!-- world sale -->
+     
+    <h1 class="tslh2">Top Sale location</h1>
+            <div class="sales-container">
+                <div class="map-container">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg" alt="World Map">
+                </div>
+                <div class="map-countries">
+                    <div class="sales-item">
+                        <img src="https://flagcdn.com/ae.svg" alt="UAE Flag">
+                        <span>Dubai</span>
+                        <span class="percentage">85%</span>
+                    </div>
+                    <div class="sales-item">
+                        <img src="https://flagcdn.com/in.svg" alt="India Flag">
+                        <span>India</span>
+                        <span class="percentage">70%</span>
+                    </div>
+                    <div class="sales-item">
+                        <img src="https://flagcdn.com/de.svg" alt="Germany Flag">
+                        <span>Germany</span>
+                        <span class="percentage">75%</span>
+                    </div>
+                    <div class="sales-item">
+                        <img src="https://flagcdn.com/ca.svg" alt="Canada Flag">
+                        <span>Canada</span>
+                        <span class="percentage">80%</span>
+                    </div>
+                    <div class="sales-item">
+                        <img src="https://flagcdn.com/au.svg" alt="Australia Flag">
+                        <span>Australia</span>
+                        <span class="percentage">50%</span>
+                    </div>
+                    <div class="sales-item">
+                        <img src="https://flagcdn.com/us.svg" alt="USA Flag">
+                        <span>United States</span>
+                        <span class="percentage">55%</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <aside class="right-sidebar">
+            <button class="banking">
+                <i class="fas fa-piggy-bank"></i> Banking
+            </button>
+            <button class="receivables">
+                <i class="fas fa-hand-holding-usd"></i> Receivables
+            </button>
+            <button class="payables">
+                <i class="fas fa-credit-card"></i> Payables
+            </button>
+            <button class="statutory">
+                <i class="fas fa-file-invoice"></i> TDS | VAT | GST 
+            </button>
+            <button class="approval">
+                <i class="fas fa-check-circle"></i> Approval
+            </button>
+            <button class="audit">
+                <i class="fas fa-search"></i> Audit
+            </button>
+        </aside>
+    </div>
+
+</body>
+<script>
+    document.querySelectorAll('.menu > li > a').forEach(item => {
+        item.addEventListener('click', () => {
+            const parent = item.parentElement;
+            parent.classList.toggle('active');
+        });
+    });
+
+    // You can add dynamic functionality here if needed
+// For example, updating the metrics dynamically
+document.addEventListener('DOMContentLoaded', function() {
+    // Example of updating metrics dynamically
+    const totalOrders = document.getElementById('total-orders');
+    const totalCustomers = document.getElementById('total-customers');
+    const totalSales = document.getElementById('total-sales');
+    const monthlySales = document.getElementById('monthly-sales');
+    const todaysSales = document.getElementById('todays-sales');
+    const totalRevenue = document.getElementById('total-revenue');
+
+    // Example data (can be fetched from an API)
+    const data = {
+        totalOrders: '20,705',
+        totalCustomers: '84,127',
+        totalSales: '9,586',
+        monthlySales: '3,507',
+        todaysSales: '357',
+        totalRevenue: '15,278'
+    };
+
+    totalOrders.textContent = data.totalOrders;
+    totalCustomers.textContent = data.totalCustomers;
+    totalSales.textContent = data.totalSales;
+    monthlySales.textContent = data.monthlySales;
+    todaysSales.textContent = data.todaysSales;
+    totalRevenue.textContent = data.totalRevenue;
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const ctx = document.getElementById('salesChart').getContext('2d');
+
+    const salesData = {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+        datasets: [{
+            label: 'Total Sales',
+            data: [15000, 10000, 12000, 8000, 9000, 11000, 13000, 14000, 15000, 16000],
+            borderColor: 'rgba(75, 192, 192, 1)',
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderWidth: 2,
+            fill: true,
+            tension: 0.4, // Smooth line
+            pointRadius: 5, // Size of the points
+            pointHoverRadius: 8, // Increase size on hover
+            pointHitRadius: 10, // Increase hover area
+            pointBackgroundColor: 'rgba(75, 192, 192, 1)', // Point color
+            pointHoverBackgroundColor: 'rgba(255, 99, 132, 1)', // Point color on hover
+        }]
+    };
+
+    const config = {
+        type: 'line',
+        data: salesData,
+        options: {
+            responsive: true,
+            interaction: {
+                mode: 'nearest', // Show tooltip for the nearest point
+                intersect: false, // Tooltip appears even if not directly on the point
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Year 2024',
+                    font: {
+                        size: 16
+                    }
+                },
+                legend: {
+                    display: true,
+                    position: 'top'
+                },
+                tooltip: {
+                    enabled: true, // Enable tooltips
+                    mode: 'nearest', // Show tooltip for the nearest point
+                    intersect: false, // Tooltip appears even if not directly on the point
+                    backgroundColor: 'rgba(0, 0, 0, 0.8)', // Tooltip background color
+                    titleColor: '#fff', // Tooltip title color
+                    bodyColor: '#fff', // Tooltip body color
+                    displayColors: false, // Hide color box in tooltip
+                    callbacks: {
+                        label: function (context) {
+                            return `Sales: $${context.raw}`; // Customize tooltip text
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Months'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Sales ($)'
+                    },
+                    beginAtZero: true
+                }
+            }
+        }
+    };
+
+    const salesChart = new Chart(ctx, config);
+});
+
+// pie chart 
+document.addEventListener('DOMContentLoaded', function () {
+    const ctx = document.getElementById('productSalesChart').getContext('2d');
+
+    const productSalesData = {
+        labels: ['Electronics', 'Clothing', 'Home Appliances', 'Books', 'Toys'],
+        datasets: [{
+            label: 'Sales',
+            data: [12000, 8000, 6000, 3000, 5000], // Sales data for each product category
+            backgroundColor: [
+                '#68abb3', // Base color
+                '#8fc5cc', // Lighter shade
+                '#a6d5db', // Even lighter shade
+                '#c2e3e7', // Very light shade
+                '#e0f0f2' // Lightest shade
+            ],
+            borderColor: [
+                '#68abb3', // Base color
+                '#8fc5cc', // Lighter shade
+                '#a6d5db', // Even lighter shade
+                '#c2e3e7', // Very light shade
+                '#e0f0f2' // Lightest shade
+            ],
+            borderWidth: 1
+        }]
+    };
+
+    const config = {
+        type: 'pie',
+        data: productSalesData,
+        options: {
+            responsive: true,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Product Sales Distribution',
+                    font: {
+                        size: 16
+                    }
+                },
+                legend: {
+                    display: true,
+                    position: 'bottom'
+                },
+                tooltip: {
+                    enabled: true,
+                    callbacks: {
+                        label: function (context) {
+                            return `${context.label}: $${context.raw}`; // Customize tooltip text
+                        }
+                    }
+                }
+            }
+        }
+    };
+
+    const productSalesChart = new Chart(ctx, config);
+});
+</script>
+
+</html>

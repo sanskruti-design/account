@@ -1,0 +1,151 @@
+/* Font import and global reset */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Body styling */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(44, 44, 44);
+}
+
+.bgvideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.7);
+}
+
+
+/* Login container */
+.signin {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* Content box */
+.content {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 350px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Headings */
+.content h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Form fields */
+.inputBox {
+  position: relative;
+  margin: 20px 0;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 12px 10px;
+  font-size: 16px;
+  color: #fff;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  outline: none;
+}
+
+.inputBox i {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.inputBox input:focus + i,
+.inputBox input:valid + i {
+  transform: translateY(-20px);
+  font-size: 12px;
+  color: #ffcc70;
+}
+
+/* Links */
+.links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.links a:hover {
+  color: #ffcc70;
+}
+
+/* Submit button */
+.inputBox input[type="submit"] {
+  cursor: pointer;
+  background: #ffcc70;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  transition: background 0.3s;
+}
+
+.inputBox input[type="submit"]:hover {
+  background: #e6b854;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .content {
+      width: 90%;
+  }
+}
